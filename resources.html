@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | Reinaldo Hermelo</title>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="challenge.html">Cyber Challenge</a>
+        <a href="resume.html">Resume</a>
+        <a href="resources.html">Resources</a>
+    </nav>
+
+    <h1>GitHub + Markdown Quick Reference</h1>
+
+    <p>
+        My personal cheat sheet for building and maintaining this portfolio.
+        Workflow: BUILD, DOCUMENT, SANITIZE, COMMIT, PUBLISH, VERIFY.
+    </p>
+
+    <h2>Key Terms</h2>
+    <ul>
+        <li><strong>Repository:</strong> a project and the files associated with it. Mine is <code>reyhrm/reyhrm.github.io</code>.</li>
+        <li><strong>Commit:</strong> a saved checkpoint of changes made to the repository.</li>
+        <li><strong>README:</strong> a file that explains a repository or project, usually <code>README.md</code>.</li>
+        <li><strong>GitHub Pages:</strong> publishes website content from a GitHub repository.</li>
+        <li><strong>Public:</strong> anyone can potentially view the repository.</li>
+        <li><strong>Private:</strong> access is restricted to approved users.</li>
+    </ul>
+
+    <h2>My Portfolio File Map</h2>
+    <p>Repository: <code>github.com/reyhrm/reyhrm.github.io</code><br>
+    Website: <code>https://reyhrm.github.io</code></p>
+    <pre>
+reyhrm.github.io/
+|- index.html       |- about.html
+|- skills.html      |- projects.html
+|- challenge.html   |- resume.html
+|- resources.html   |- README.md
+|- css/style.css    (planned)
+|- images/          (planned)
+    </pre>
+    <p>Repository = what I am building. GitHub Pages = what visitors see.</p>
+
+    <h2>HTML I Actually Use</h2>
+    <h3>Headings and paragraphs</h3>
+    <pre>
+&lt;h1&gt;Cybersecurity Projects&lt;/h1&gt;
+&lt;h2&gt;Windows Hardening&lt;/h2&gt;
+&lt;p&gt;This project focused on identifying and correcting insecure configurations.&lt;/p&gt;
+    </pre>
+    <h3>Links and lists</h3>
+    <pre>
+&lt;a href="projects.html"&gt;Projects&lt;/a&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Windows&lt;/li&gt;
+  &lt;li&gt;Linux&lt;/li&gt;
+&lt;/ul&gt;
+    </pre>
+    <h3>Images</h3>
+    <pre>
+&lt;img src="images/project1.png" alt="Sanitized project result"&gt;
+    </pre>
+    <p>Always include useful alt text. It improves accessibility and explains what the evidence shows if the image cannot load.</p>
+
+    <h2>Markdown (for README files)</h2>
+    <pre>
+# Main Heading
+## Section Heading
+**Bold Text**
+*Italic Text*
+- Bullet item
+1. Numbered item
+[Portfolio](https://reyhrm.github.io)
+`ipconfig`
+    </pre>
+
+    <h2>Useful Git Commands</h2>
+    <pre>
+git status
+git log
+git add .
+git commit -m "Add project"
+git push
+git pull
+    </pre>
+
+    <h2>Good Commit Messages</h2>
+    <p>A commit message should briefly explain what changed.</p>
+    <ul>
+        <li>Add About page</li>
+        <li>Update cybersecurity skills</li>
+        <li>Document Linux hardening project</li>
+    </ul>
+
+    <h2>Fix It Before You Panic</h2>
+    <ul>
+        <li><strong>Site not updating:</strong> Did I commit? Did the deployment finish? Am I on the correct URL?</li>
+        <li><strong>404 error:</strong> check the filename, capitalization, and link path.</li>
+        <li><strong>Image missing:</strong> check the images folder and the exact src path.</li>
+        <li><strong>Broken nav:</strong> confirm the target file exists and the spelling matches.</li>
+    </ul>
+
+    <h2>10-Second Security Check</h2>
+    <p>Before every commit, ask:</p>
+    <ul>
+        <li>Secrets or passwords?</li>
+        <li>Tokens or keys?</li>
+        <li>Personal information?</li>
+        <li>Challenge answers or flags?</li>
+        <li>Classmate information?</li>
+    </ul>
+    <p>STOP, SANITIZE, COMMIT. If something should not be public, fix it before publishing it.</p>
+
+</body>
+</html>
