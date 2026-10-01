@@ -1,0 +1,210 @@
+/* Cybersecurity portfolio theme: dark grid, neon accents, terminal boxes */
+
+:root {
+    --bg: #0a1218;
+    --card: #0e1b24;
+    --bar: #0d1820;
+    --line: #16303d;
+    --text: #e6edf3;
+    --muted: #7d8da0;
+    --cyan: #2fd4ff;
+    --lime: #b8f03a;
+    --purple: #a460ff;
+    --orange: #ff9d3a;
+    --mono: "DejaVu Sans Mono", Consolas, Menlo, "Courier New", monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--bg);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding-bottom: 5rem;
+    color: var(--text);
+    font-family: "DejaVu Sans", Verdana, Arial, sans-serif;
+    line-height: 1.65;
+    background-color: var(--bg);
+    background-image:
+        linear-gradient(rgba(47, 212, 255, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47, 212, 255, 0.07) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+/* Keep page content in a centered column */
+body > * {
+    width: min(900px, calc(100% - 2.5rem));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Top bar navigation */
+body > nav {
+    width: 100%;
+    margin: 0 0 2.5rem 0;
+    padding: 0.9rem max(1.25rem, calc((100% - 900px) / 2));
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    background: var(--bar);
+    border-bottom: 1px solid var(--line);
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+nav a {
+    color: var(--cyan);
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--lime);
+    text-decoration: underline;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+h1 + p {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--cyan);
+}
+
+p {
+    color: var(--muted);
+}
+
+p + p {
+    color: var(--text);
+}
+
+h2 {
+    margin: 2.5rem auto 0.75rem;
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cyan);
+}
+
+h3 {
+    margin: 1.5rem auto 0.5rem;
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--lime);
+}
+
+strong {
+    color: #ffffff;
+}
+
+a {
+    color: var(--cyan);
+}
+
+/* Lists become cards with a colored bottom edge */
+ul {
+    padding: 1rem 1.25rem 1rem 2.5rem;
+    background: var(--card);
+    border-radius: 6px;
+    border-bottom: 3px solid var(--cyan);
+    color: var(--text);
+}
+
+ul:nth-of-type(4n + 2) {
+    border-bottom-color: var(--lime);
+}
+
+ul:nth-of-type(4n + 3) {
+    border-bottom-color: var(--purple);
+}
+
+ul:nth-of-type(4n + 4) {
+    border-bottom-color: var(--orange);
+}
+
+li {
+    margin: 0.35rem 0;
+}
+
+/* Code blocks look like the terminal examples */
+pre {
+    position: relative;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    padding: 2.4rem 1.25rem 1rem;
+    overflow-x: auto;
+    background: #08131a;
+    border: 1px solid var(--cyan);
+    border-radius: 10px;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+pre::before {
+    content: "TERMINAL // EXAMPLE";
+    position: absolute;
+    top: 0.8rem;
+    left: 1.25rem;
+    font-size: 0.68rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    color: var(--cyan);
+}
+
+code {
+    font-family: var(--mono);
+    font-size: 0.85em;
+    color: var(--lime);
+}
+
+pre code {
+    color: inherit;
+}
+
+/* Footer strip showing the workflow */
+body::after {
+    content: "BUILD > DOCUMENT > SANITIZE > COMMIT > PUBLISH > VERIFY";
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.55rem 1.25rem;
+    background: var(--bar);
+    border-top: 1px solid var(--line);
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    body::after {
+        font-size: 0.55rem;
+    }
+}
